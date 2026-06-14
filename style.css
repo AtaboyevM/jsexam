@@ -5,9 +5,25 @@
   padding: 0;
   box-sizing: border-box;
 }
-/* Root Ulandi Qisqa kode yozish uchun */
+
 :root {
+  --bg-color: #ffffff;
+  --text-color: #1e1e1e;
   --ff-popins: "Poppins", sans-serif;
+}
+
+body.dark {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+  font-family: var(--ff-popins);
 }
 
 /* Header Start */
@@ -98,6 +114,24 @@ a {
 }
 
 .singup-btn:hover {
+  background-color: #4292e8;
+  color: whitesmoke;
+}
+
+.mode-header {
+  width: 120px;
+  border: none;
+  margin-top: 10px;
+  background-color: #1572d3;
+  border-radius: 8px;
+  padding: 16px 32px 16px 32px;
+  color: #ffffff;
+  font-family: var(--ff-popins);
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+.mode-header:hover {
   background-color: #4292e8;
   color: whitesmoke;
 }
@@ -232,7 +266,6 @@ a {
   font-family: var(--ff-popins);
   font-weight: 500;
   font-size: 38px;
-  color: #333333;
 }
 
 .work-divs {
@@ -312,17 +345,222 @@ a {
 }
 
 .deals-item {
-  padding-top: 56px;
+  padding-top: 60px;
   width: 451px;
-  height: 120px;
+  height: 130px;
 }
 
 /* Deals Section end */
 
+/* Popular section start */
+.popular-car {
+  width: 100%;
+  height: 640px;
+  margin-top: 184px;
+}
+
+.pp-titles {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.pp-btn {
+  width: 226px;
+  height: 42px;
+  border-radius: 8px;
+  padding: 16px 32px 30px 32px;
+  background-color: #1572d31a;
+  text-align: center;
+  color: #1572d3;
+  text-align: center;
+  border: none;
+  margin-bottom: 32px;
+  font-family: var(--ff-popins);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.pp-divs {
+  padding: 64px 160px 43px 160px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pp-minidiv {
+  box-shadow: 0px 12px 24px 0px #104c8b29;
+  width: 256px;
+  height: 370px;
+  border-radius: 15px;
+  position: relative;
+
+  img {
+    padding: 26px 24px 25px 26px;
+  }
+
+  h2 {
+    width: 206px;
+    height: 11px;
+    font-family: var(--ff-popins);
+    font-weight: 500;
+    font-size: 16px;
+    padding: 0px 4px 0px 26px;
+  }
+}
+
+.like {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  transition: all 200ms linear;
+  cursor: pointer;
+}
+
+.korinmas {
+  display: none;
+}
+
+.pp-spans {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 24px 0px 26px;
+
+  h4 {
+    width: 34px;
+    font-family: var(--ff-popins);
+    font-weight: 400;
+    font-size: 14px;
+    color: #595959;
+  }
+}
+
+.pp-button {
+  width: 208px;
+  margin-top: 24px;
+  background-color: #1572d3;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  height: 40px;
+  border-radius: 8px;
+  padding: 8px;
+  margin-left: 20px;
+}
+
+.btngapp {
+  width: 100%;
+}
+
+.seeAllbtnpp {
+  width: 216px;
+  margin: 0 auto;
+  height: 48px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  gap: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4b5563;
+  font-family: var(--ff-popins);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.seeAllbtnpp:hover {
+  border-color: #1572d3;
+  color: #1572d3;
+  background-color: #f4f9ff;
+}
+/* Popular section end */
+/* Download section start */
+.download-section {
+  width: 100%;
+  height: 450px;
+  display: flex;
+  padding-top: 40px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.download-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.download-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.download-btn {
+  width: 111px;
+  height: 34px;
+  background-color: #1572d31a;
+  color: #1572d3;
+  border: none;
+  border-radius: 4px;
+  font-family: var(--ff-popins);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: default;
+  margin-bottom: 24px;
+}
+
+.download-title {
+  width: 480px;
+  height: 92px;
+  font-family: var(--ff-popins);
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: 0%;
+  margin-bottom: 16px;
+}
+
+.free-text {
+  font-family: var(--ff-popins);
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: #1572d3;
+}
+
+.download-desc {
+  font-family: var(--ff-popins);
+  font-size: 16px;
+  padding-top: 30px;
+}
+
+.download-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.download-image img {
+  max-height: 500px;
+  object-fit: contain;
+}
+/* Download section end */
+
 /* footer start */
 .footer {
   width: 100%;
-  height: 375px;
+  height: 350px;
   background-color: #051c34;
   margin-top: 120px;
 }
@@ -418,6 +656,5 @@ a {
   background-color: #1572d3;
   border-color: #1572d3;
 }
-
 
 /* footer end */
