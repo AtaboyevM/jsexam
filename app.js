@@ -51,3 +51,44 @@ hiddenCards.forEach((card) => {
     }
   });
 });
+
+
+// iput Qidruv oyna
+const ppInp = document.querySelector(".PP-inp");
+const ppDiv = document.querySelectorAll(".pp-minidiv");
+
+ppInp.addEventListener("input", () => {
+  let value = ppInp.value.toLowerCase();
+
+  ppDiv.forEach((card) => {
+    let title = card.querySelector("h2").textContent.toLowerCase();
+
+    if (title.includes(value)) {
+      card.style.display = "";
+    } else {
+      card.style.display = "none";
+    }
+  });
+});
+
+// soat 
+
+let vaqt = document.querySelector('#soat');
+
+let soatvaqti = () => {
+    let now = new Date();
+
+    let hour = now.getHours();
+    let minute = now.getMinutes();
+    let seconds = now.getSeconds();
+
+    hour = String(hour).padStart(2, '0');
+    minute = String(minute).padStart(2, '0');
+    seconds = String(seconds).padStart(2, '0');
+
+    vaqt.innerHTML = `${hour}:${minute}:${seconds}`;
+}
+
+soatvaqti();
+
+setInterval(soatvaqti, 1000);
