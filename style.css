@@ -386,7 +386,8 @@ a {
   padding: 64px 160px 43px 160px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 30px;
 }
 
 .pp-minidiv {
@@ -408,6 +409,11 @@ a {
     font-size: 16px;
     padding: 0px 4px 0px 26px;
   }
+}
+
+.pp-minidiv:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 .like {
